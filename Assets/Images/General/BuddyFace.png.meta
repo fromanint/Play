@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 0a1167078754f904aa1dbb30c65c879b
-timeCreated: 1466697969
+timeCreated: 1467065565
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -10,6 +10,15 @@ TextureImporter:
     21300006: mouth-
     21300008: eye-brows
     21300010: Mouth-2
+    21300012: eybrows
+    21300014: eyes3
+    21300016: eye1
+    21300018: eyes2
+    21300020: nose
+    21300022: mouth3
+    21300024: mouth
+    21300026: mouth2
+    21300028: mouth4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -56,68 +65,101 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: Eyes1
+    - name: eybrows
       rect:
         serializedVersion: 2
         x: 0
-        y: 66
-        width: 60
-        height: 22
+        y: 89
+        width: 57
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Close-Eyes
+    - name: eyes3
       rect:
         serializedVersion: 2
-        x: 89
-        y: 66
+        x: 176
+        y: 69
+        width: 50
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: eye1
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 67
+        width: 45
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: eyes2
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 72
         width: 46
-        height: 21
+        height: 7
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Nose
+    - name: nose
       rect:
         serializedVersion: 2
-        x: 31
+        x: 30
         y: 32
-        width: 12
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: mouth3
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 6
+        width: 38
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: mouth
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 4
+        width: 26
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: mouth2
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 0
+        width: 25
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: mouth-
+    - name: mouth4
       rect:
         serializedVersion: 2
-        x: 8
-        y: 0
-        width: 28
-        height: 15
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: eye-brows
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 88
-        width: 63
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: Mouth-2
-      rect:
-        serializedVersion: 2
-        x: 84
-        y: 0
-        width: 29
-        height: 17
+        x: 241
+        y: 6
+        width: 40
+        height: 23
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -89,14 +89,14 @@ public class ActionButtons: MonoBehaviour {
 
 	public void FBShare()
 	{
-		FB.FeedShare("",
-			null,
-			"Play",
-			"I have done 5000 mts and collect 4000 notes, would you be able to  beat me?",
-			"I have done 5000 mts and collect 4000 notes, would you be able to  beat me?",
-			null,
-			 "",
-			null);
+		FB.FeedShare(
+  link: new System.Uri("https://example.com/myapp/?storyID=thelarch"),
+  linkName: "The Larch",
+  linkCaption: "I thought up a witty tagline about larches",
+  linkDescription: "There are a lot of larch trees around here, aren't there?",
+  picture: new System.Uri("https://example.com/myapp/assets/1/larch.jpg"),
+  callback: null
+);
 	}
 
 

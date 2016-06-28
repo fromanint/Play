@@ -1,0 +1,265 @@
+fileFormatVersion: 2
+guid: 90659081bc8201d4b86816f38bf1c97c
+timeCreated: 1467065677
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: stay
+    21300002: hit
+    21300004: fall
+    21300006: run1
+    21300008: run2
+    21300010: run3
+    21300012: run4
+    21300014: run5
+    21300016: run6
+    21300018: shoes
+    21300020: shoes2
+    21300022: shoes3
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: stay
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 211
+        width: 45
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22.5, y: 25}
+        - {x: -22.5, y: -25}
+        - {x: 22.5, y: -25}
+        - {x: 22.5, y: 25}
+    - name: hit
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 211
+        width: 66
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -33, y: 29}
+        - {x: -33, y: -29}
+        - {x: 30, y: -29}
+        - {x: 33, y: -25}
+        - {x: 33, y: 5}
+        - {x: -7, y: 29}
+    - name: fall
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 217
+        width: 65
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29.5, y: 21}
+        - {x: -32.5, y: 12}
+        - {x: -32.5, y: -12}
+        - {x: -23.5, y: -21}
+        - {x: 32.5, y: -21}
+        - {x: 32.5, y: 21}
+    - name: run1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 137
+        width: 51
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23.5, y: 23}
+        - {x: -25.5, y: 11}
+        - {x: -25.5, y: -23}
+        - {x: 5.5, y: -23}
+        - {x: 25.5, y: 8}
+        - {x: 25.5, y: 21}
+        - {x: 7.5, y: 23}
+    - name: run2
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 131
+        width: 67
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 33.5, y: -5.5}
+        - {x: 33.5, y: 16.5}
+        - {x: 9.5, y: 26.5}
+        - {x: -14.5, y: 26.5}
+        - {x: -33.5, y: -8.5}
+        - {x: -33.5, y: -21.5}
+        - {x: -28.5, y: -26.5}
+        - {x: -14.5, y: -26.5}
+        - {x: -13.5, y: -25.5}
+        - {x: -9.5, y: -26.5}
+        - {x: 18.5, y: -26.5}
+    - name: run3
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 130
+        width: 76
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -38, y: 27.5}
+        - {x: -38, y: -18.5}
+        - {x: -19, y: -27.5}
+        - {x: 38, y: -27.5}
+        - {x: 38, y: 27.5}
+    - name: run4
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 61
+        width: 61
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27.5, y: 26.5}
+        - {x: -30.5, y: 24.5}
+        - {x: -30.5, y: -26.5}
+        - {x: 17.5, y: -26.5}
+        - {x: 30.5, y: 5.5}
+        - {x: 30.5, y: 17.5}
+        - {x: 18.5, y: 26.5}
+    - name: run5
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 56
+        width: 50
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23, y: 26}
+        - {x: -25, y: 6}
+        - {x: -25, y: -24}
+        - {x: -23, y: -26}
+        - {x: 0, y: -26}
+        - {x: 19, y: -15}
+        - {x: 25, y: 7}
+        - {x: 25, y: 20}
+        - {x: -1, y: 26}
+    - name: run6
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 55
+        width: 66
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: 26.5}
+        - {x: -33, y: 9.5}
+        - {x: -33, y: -8.5}
+        - {x: -17, y: -24.5}
+        - {x: -11, y: -26.5}
+        - {x: 28, y: -26.5}
+        - {x: 33, y: -24.5}
+        - {x: 33, y: 23.5}
+        - {x: 11, y: 26.5}
+    - name: shoes
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 9
+        width: 31
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: shoes2
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 3
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: shoes3
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 0
+        width: 29
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
