@@ -70,7 +70,7 @@ public class PlayerControl : MonoBehaviour
         Time.timeScale = 1;
     }
 
-    void OnTriggerStay2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
    
         if (other.tag == "Obstacle")
@@ -95,8 +95,8 @@ public class PlayerControl : MonoBehaviour
         CM.Run(0);
         GetComponent<Animator>().SetTrigger("Hit");
         yield return new WaitForSeconds(starTime);
-        lifes--;
         Destroy(obstacle.gameObject);
+        lifes--;
         StartCoroutine("StartRun");
 
 
