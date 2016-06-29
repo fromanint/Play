@@ -4,9 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class Open : MonoBehaviour {
 
-    [SerializeField]
-    string objective;
-
+    [SerializeField]string objective = "";
+    
     public void OpenScene() {
         SceneManager.LoadScene(objective);
     }

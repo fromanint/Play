@@ -9,7 +9,8 @@ public class CharacterMovement : MonoBehaviour {
 
 	public void Run(float speed)
 	{
-		transform.GetComponent<Rigidbody2D> ().AddForce (new Vector2(speed,0),ForceMode2D.Impulse);
+        transform.GetComponent<Rigidbody2D> ().AddForce (new Vector2(speed,0),ForceMode2D.Impulse);
+       // transform.GetComponent<Rigidbody2D>().velocity = new Vector2(speed,0);
 	}
 
 	public void ChangePos(float y)
