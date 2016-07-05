@@ -192,6 +192,7 @@
     <Compile Include="Assets\Scripts\Run\Characters\CharacterMovement.cs" />
     <Compile Include="Assets\Scripts\Run\Characters\PlayerControl.cs" />
     <Compile Include="Assets\Scripts\Run\DestroyObject.cs" />
+    <Compile Include="Assets\Scripts\Run\Notes.cs" />
     <Compile Include="Assets\Scripts\Run\SpawnObjects.cs" />
     <Compile Include="Assets\Scripts\SocialNetwork\ActionButtons.cs" />
   </ItemGroup>

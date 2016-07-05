@@ -52,10 +52,6 @@ public class PlayerControl : MonoBehaviour
             CM.Run(acceleration);
             Time.timeScale = Time.timeScale + acceleration;
         }
-        /*speed += acceleration;
-		GetComponent<Animator> ().speed += acceleration;
-		CM.Run (speed);*/
-    
         StartCoroutine ("Acceleration");
 	}
 
@@ -73,7 +69,7 @@ public class PlayerControl : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
    
-        if (other.tag == "Obstacle")
+        if (other.gameObject.tag == "Obstacle")
         {
             GetComponent<Rigidbody2D>().velocity = Vector3.zero;
             if (lifes > 0)
@@ -92,10 +88,12 @@ public class PlayerControl : MonoBehaviour
     {
         Time.timeScale = 1;
         Debug.Log("Blinking");
+        GetComponent<SpriteRenderer>().color = Color.Lerp(Color.white, Color.black, Mathf.PingPong(Time.time, 1));
         CM.Run(0);
         GetComponent<Animator>().SetTrigger("Hit");
         yield return new WaitForSeconds(starTime);
-        Destroy(obstacle.gameObject);
+        Debug.Log(obstacle.gameObject.name);
+       // Destroy(obstacle.gameObject);
         lifes--;
         StartCoroutine("StartRun");
 

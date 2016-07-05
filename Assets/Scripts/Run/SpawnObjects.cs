@@ -29,6 +29,7 @@ public class SpawnObjects : MonoBehaviour
 		    int enemyIndex = Random.Range(0, Obstacles.Length);
 		    GameObject GO = Instantiate(Obstacles[enemyIndex], transform.position, transform.rotation) as GameObject;
 		    GO.transform.parent = parent.transform;
+            Debug.Log(GO.name);
         }
 
 
