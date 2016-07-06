@@ -73,19 +73,25 @@ public class PlayerControl : MonoBehaviour
     }
 
 
-	public void ManageLifes(){
+	public void ManageLifes(float delay){
 		lifes--;
 		if (lifes >= 0) {
-			
-			Debug.Log (lifes);
+            GetComponent<Animator>().SetTrigger("Hit");
+            Debug.Log (lifes);
 		} else {
-			GetComponent<Animator> ().SetTrigger ("Fall");
-			FindObjectOfType<UIGameControl> ().GameOver();
-			Debug.Log ("Game Over");
+
+            StartCoroutine("GameOver",delay);
+            Debug.Log ("Game Over");
 
 		}
 	
 	}
+    IEnumerator GameOver(float delay) {
+        GetComponent<Animator>().SetTrigger("Fall");
+        FindObjectOfType<GameControl>().SaveScore();
+        yield return new WaitForSeconds(delay+1);
+        FindObjectOfType<UIGameControl>().GameOver();
+    }
    /* void OnTriggerEnter2D(Collider2D other)
     {
    

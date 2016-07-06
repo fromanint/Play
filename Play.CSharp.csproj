@@ -184,16 +184,24 @@
     <Compile Include="Assets\FacebookSDK\SDK\Scripts\Utils\IFacebookLogger.cs" />
     <Compile Include="Assets\FacebookSDK\SDK\Scripts\Utils\MiniJson.cs" />
     <Compile Include="Assets\FacebookSDK\SDK\Scripts\Utils\Utilities.cs" />
-    <Compile Include="Assets\Scripts\MainMenu\GameControl.cs" />
+    <Compile Include="Assets\Scripts\Generals\GameControl.cs" />
+    <Compile Include="Assets\Scripts\Generals\InitGame.cs" />
+    <Compile Include="Assets\Scripts\Generals\ScoreUI.cs" />
+    <Compile Include="Assets\Scripts\Generals\SoundControl.cs" />
+    <Compile Include="Assets\Scripts\Generals\Var_Globales.cs" />
+    <Compile Include="Assets\Scripts\MainMenu\Exit.cs" />
+    <Compile Include="Assets\Scripts\MainMenu\MainMenuControl.cs" />
     <Compile Include="Assets\Scripts\MainMenu\Open.cs" />
-    <Compile Include="Assets\Scripts\Run\BackgroundControl.cs" />
     <Compile Include="Assets\Scripts\Run\Camera\CameraFollow.cs" />
-    <Compile Include="Assets\Scripts\Run\Camera2DFollow.cs" />
     <Compile Include="Assets\Scripts\Run\Characters\CharacterMovement.cs" />
     <Compile Include="Assets\Scripts\Run\Characters\PlayerControl.cs" />
-    <Compile Include="Assets\Scripts\Run\DestroyObject.cs" />
-    <Compile Include="Assets\Scripts\Run\Notes.cs" />
-    <Compile Include="Assets\Scripts\Run\SpawnObjects.cs" />
+    <Compile Include="Assets\Scripts\Run\General\BackgroundControl.cs" />
+    <Compile Include="Assets\Scripts\Run\General\Camera2DFollow.cs" />
+    <Compile Include="Assets\Scripts\Run\General\SpawnObjects.cs" />
+    <Compile Include="Assets\Scripts\Run\General\UIGameControl.cs" />
+    <Compile Include="Assets\Scripts\Run\Objects\DestroyObject.cs" />
+    <Compile Include="Assets\Scripts\Run\Objects\Notes.cs" />
+    <Compile Include="Assets\Scripts\Run\Objects\Obstacle.cs" />
     <Compile Include="Assets\Scripts\SocialNetwork\ActionButtons.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
+[RequireComponent(typeof(SpriteRenderer))]
 public class Obstacle : MonoBehaviour {
 
 	[SerializeField] float damage;
@@ -9,9 +11,8 @@ public class Obstacle : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D other){
 		if (other.gameObject.tag == "Player") {
-			other.gameObject.GetComponent<PlayerControl> ().ManageLifes ();
+			other.gameObject.GetComponent<PlayerControl> ().ManageLifes (destroyDelay);
 			other.gameObject.GetComponent<Rigidbody2D> ().velocity = Vector3.zero;
-			other.gameObject.GetComponent<Animator> ().SetTrigger ("Hit");
 			StartCoroutine ("DesetroyObstacle",other.gameObject);
 
 
@@ -19,10 +20,7 @@ public class Obstacle : MonoBehaviour {
 	}
 
 	IEnumerator DesetroyObstacle(GameObject other){
-
-
 		yield return new WaitForSeconds (destroyDelay);
-
 		other.GetComponent<PlayerControl> ().StartCoroutine ("StartRun");
 		Destroy (gameObject);
 	}
