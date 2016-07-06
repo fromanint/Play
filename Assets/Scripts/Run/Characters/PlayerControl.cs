@@ -17,11 +17,17 @@ public class PlayerControl : MonoBehaviour
 
 
 	CharacterMovement CM;
+
+	void Awake(){
+		CM = GetComponent<CharacterMovement> ();
+
+	}
+
     // Use this for initialization
     void Start()
     {
         StartCoroutine("StartRun");
-		CM = GetComponent<CharacterMovement> ();
+
     }
 
     // Update is called once per frame
@@ -66,7 +72,21 @@ public class PlayerControl : MonoBehaviour
         Time.timeScale = 1;
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+
+	public void ManageLifes(){
+		lifes--;
+		if (lifes >= 0) {
+			
+			Debug.Log (lifes);
+		} else {
+			GetComponent<Animator> ().SetTrigger ("Fall");
+			FindObjectOfType<UIGameControl> ().GameOver();
+			Debug.Log ("Game Over");
+
+		}
+	
+	}
+   /* void OnTriggerEnter2D(Collider2D other)
     {
    
         if (other.gameObject.tag == "Obstacle")
@@ -98,7 +118,7 @@ public class PlayerControl : MonoBehaviour
         StartCoroutine("StartRun");
 
 
-    }
+    }*/
 
 
 }
