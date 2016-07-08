@@ -130,12 +130,6 @@
     <Reference Include="UnityEditor.iOS.Extensions.Common">
       <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
-    <Reference Include="JarResolverLib">
-      <HintPath>Assets\PlayServicesResolver\Editor\JarResolverLib.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Advertisements">
-      <HintPath>Assets\Plugins\UnityEngine.Advertisements.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Play.CSharp.Plugins.csproj">
@@ -161,21 +155,10 @@
     <Compile Include="Assets\Facebook\Editor\iOS\FixupFiles.cs" />
     <Compile Include="Assets\Facebook\Editor\iOS\PListDict.cs" />
     <Compile Include="Assets\Facebook\Editor\iOS\PListParser.cs" />
-    <Compile Include="Assets\GoogleMobileAds\Editor\CocoaPodHelper.cs" />
-    <Compile Include="Assets\GoogleMobileAds\Editor\PostProcessor.cs" />
-    <Compile Include="Assets\PlayServicesResolver\Editor\AdMobDependencies.cs" />
-    <Compile Include="Assets\PlayServicesResolver\Editor\DefaultResolver.cs" />
-    <Compile Include="Assets\PlayServicesResolver\Editor\IResolver.cs" />
-    <Compile Include="Assets\PlayServicesResolver\Editor\PlayServicesResolver.cs" />
-    <Compile Include="Assets\PlayServicesResolver\Editor\ResolverVer1_1.cs" />
-    <Compile Include="Assets\PlayServicesResolver\Editor\ResolverVer1_2.cs" />
-    <Compile Include="Assets\PlayServicesResolver\Editor\SampleDependencies.cs" />
-    <Compile Include="Assets\PlayServicesResolver\Editor\SettingsDialog.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Facebook\Scripts\Canvas\Resources\JSSDKBindings.txt" />
     <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
-    <None Include="Assets\Plugins\Android\GoogleMobileAdsPlugin\AndroidManifest.xml" />
     <None Include="Assets\Plugins\Android\unityads\AndroidManifest.xml" />
     <None Include="Assets\Plugins\Android\unityads\build.xml" />
     <None Include="Assets\Plugins\Android\unityads\proguard-project.txt" />
