@@ -217,6 +217,8 @@
     <Compile Include="Assets\Project\Scripts\Generals\SoundControl.cs" />
     <Compile Include="Assets\Project\Scripts\Generals\Var_Globales.cs" />
     <Compile Include="Assets\Project\Scripts\MainMenu\Exit.cs" />
+    <Compile Include="Assets\Project\Scripts\MainMenu\InfoItem.cs" />
+    <Compile Include="Assets\Project\Scripts\MainMenu\Information.cs" />
     <Compile Include="Assets\Project\Scripts\MainMenu\MainMenuControl.cs" />
     <Compile Include="Assets\Project\Scripts\MainMenu\Open.cs" />
     <Compile Include="Assets\Project\Scripts\MainMenu\Video.cs" />

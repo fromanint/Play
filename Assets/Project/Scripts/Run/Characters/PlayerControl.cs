@@ -18,28 +18,33 @@ public class PlayerControl : MonoBehaviour
 	float yOffset = -0.4f;
 	[SerializeField] float startSpeed;
 	[SerializeField] float acceleration = 1.05f;
-    [SerializeField] float accelerationMilestone;
+    [SerializeField] float initialMilestone;
+    [SerializeField] float addPerhit;
+
+
    
    [HideInInspector]
     public float speed;
-    
+    float accelerationMilestone;
+    float hit =0;
 
-	CharacterMovement CM;
+    CharacterMovement CM;
   
     
 
 	void Awake(){
 		CM = GetComponent<CharacterMovement> ();
         speed = 0;
+        hit = 0;
         lifes = maxLifes;
 	}
 
     // Use this for initialization
     void Start()
     {
-        accelerationMilestone += transform.position.x;
+        
         StartCoroutine("StartRun");
-
+ 
     }
 
 
@@ -50,8 +55,9 @@ public class PlayerControl : MonoBehaviour
 
         if (transform.position.x >= accelerationMilestone)
         {
-            speed *= acceleration;
+            speed *= acceleration + (addPerhit * hit);
             accelerationMilestone += transform.position.x;
+
 
         }
         CM.Run(speed);
@@ -61,25 +67,27 @@ public class PlayerControl : MonoBehaviour
     IEnumerator StartRun()
     {
        
-		yield return new WaitForSeconds (starTime);
+        yield return new WaitForSeconds (starTime);
+        accelerationMilestone = transform.position.x + initialMilestone;
         GetComponent<Animator>().SetTrigger("Run");
         speed = startSpeed;
 		CM.Run (speed);
-        
       
     }
 
 
 	public void ManageLifes(float delay){
 		lifes--;
-		if (lifes >= 0) {
+        hit++;
+		if (lifes > 0) {
+            Debug.Log("hit");
             GetComponent<Animator>().SetTrigger("Hit");
             FindObjectOfType<LifesManager>().UpdateLifes();
             speed = 0;
             CM.Run(speed);
             Start();
 
-		} else {
+        } else {
             GetComponent<Animator>().SetTrigger("Fall");
             StartCoroutine("GameOver",delay);
 
