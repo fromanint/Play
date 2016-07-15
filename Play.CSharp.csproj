@@ -216,6 +216,11 @@
     <Compile Include="Assets\Project\Scripts\Generals\ScoreUI.cs" />
     <Compile Include="Assets\Project\Scripts\Generals\SoundControl.cs" />
     <Compile Include="Assets\Project\Scripts\Generals\Var_Globales.cs" />
+    <Compile Include="Assets\Project\Scripts\Guess\AssignNote.cs" />
+    <Compile Include="Assets\Project\Scripts\Guess\FirstNote.cs" />
+    <Compile Include="Assets\Project\Scripts\Guess\GuessControl.cs" />
+    <Compile Include="Assets\Project\Scripts\Guess\NoteButton.cs" />
+    <Compile Include="Assets\Project\Scripts\Guess\NoteGuess.cs" />
     <Compile Include="Assets\Project\Scripts\MainMenu\Exit.cs" />
     <Compile Include="Assets\Project\Scripts\MainMenu\InfoItem.cs" />
     <Compile Include="Assets\Project\Scripts\MainMenu\Information.cs" />
