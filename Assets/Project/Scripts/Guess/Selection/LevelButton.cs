@@ -1,75 +1,91 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
+[RequireComponent(typeof(LevelInfo))]
 public class LevelButton : MonoBehaviour {
 
-    [HideInInspector] public int level;
-    [HideInInspector] public int price;
-    [HideInInspector] public int maxScore;
+	[HideInInspector]public LevelInfo level;
+	[HideInInspector]public ConfirmPanel confirmPanel;
+   
 
     [SerializeField] Text levelName;
+	[SerializeField] Text levelPrice;
     [SerializeField] GameObject Stars;
     [SerializeField] GameObject Price;
+	[SerializeField] Color haveStar;
 
+
+
+
+	public void CopyLevelInfo(LevelInfo levelInfo)
+	{
+		
+		level.CopyInfo (levelInfo);
+	}
     
+	public void ChooseLevel()
+	{
+		if (level.unlock) {
+			SpawnLevel sl = FindObjectOfType<SpawnLevel> ();
+			sl.index = level.levelName-1;
+			//Var_Globales.levelSelected = level.levelName;
+			SceneManager.LoadScene ("GuessLevel");
+		} else {
 
-    int unlock;
-    int score;
-    // Use this for initialization
-    void Start() {
-        PlayerPrefs.SetInt("Level" + level.ToString(), 1);
-        unlock = PlayerPrefs.GetInt("Level" + level.ToString() , 0 );
-        
+			confirmPanel.objectName = "Level " + level.levelName.ToString();
+			confirmPanel.objectPrice = level.price;
+			confirmPanel.gameObject.SetActive (true);
+		}
 
-        if (unlock == 0)
-        {
-            ChangeState(false);
-        }
-        else
-        {
-            ChangeState(true);
-            SetStars();
-        }
+	}
+
+	public void DisplayInfo(){
+		ChangeState ();
+		SetName ();
+		SetStars ();
+	}
 
 
-    }
+	void Awake()
+	{
+		level = GetComponent<LevelInfo> ();
 
-
-    public void SetStars()
+	}
+     void SetStars()
     {
-        score = PlayerPrefs.GetInt("Level" + level.ToString() + "Score", 0);
-        Image[] stars = transform.GetComponentsInChildren<Image>();
-        if (score >= maxScore * .6)
-        {
-            stars[0].color = new Color(234, 324, 112);
-        }
-        if (score >= maxScore * .8)
-        {
-            stars[1].color = new Color(234, 324, 112);
-        }
-        if (score >= maxScore * .95)
-        {
-            stars[2].color = new Color(234, 324, 112);
-        }
-
-    }
-
-    public void ChangeState(bool state)
-    {
-        GetComponent<Button>().interactable = state;
-        Stars.SetActive(state);
-        Price.SetActive(!state);
-    }
-
-	public void SetName () {
-        levelName.text = level.ToString();
+		
        
+		Image[] stars = Stars.transform.GetComponentsInChildren<Image>();
+        if (level.score >= level.maxScore * .6)
+        {
+			stars [1].color = haveStar;
+        }
+        if (level.score >= level.maxScore * .8)
+        {
+			stars[2].color = haveStar;
+        }
+        if (level.score >= level.maxScore * .95)
+        {
+			stars[3].color = haveStar;
+        }
+
+    }
+
+
+
+     void ChangeState()
+    {
+		Stars.SetActive(level.unlock);
+		Price.SetActive(!level.unlock);
+    }
+
+	 void SetName () {
+		levelName.text = level.levelName.ToString();
+		levelPrice.text = level.price.ToString ();
 	}
 
     // Update is called once per frame
-    public void ChooseLevel()
-    {
-        Debug.Log(level-1);
-    }
+
 }

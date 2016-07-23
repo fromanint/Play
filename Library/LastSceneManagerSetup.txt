@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Project/Scenes/Guess.unity
+- path: Assets/Project/Scenes/GuessLevel.unity
   isLoaded: 1
   isActive: 1

@@ -5,18 +5,36 @@ using System.Collections;
 
 public class LevelManager : MonoBehaviour {
     [SerializeField]
-    GameObject[] levels;
+	LevelInfo[] levels;
     [SerializeField]
     LevelButton levelsButton;
+	[SerializeField] int maxLevels;
+
+
 	// Use this for initialization
-	void Start () {
-        for (int i = 0; i < levels.Length; i++)
+	void Awake () {
+		ConfirmPanel CP= FindObjectOfType<ConfirmPanel> ();
+		SpawnLevel sl = FindObjectOfType<SpawnLevel> ();
+
+		for (int i = 0; i < sl.GetLevels().Length; i++)
         {
             LevelButton newButton = Instantiate(levelsButton) as LevelButton;
             newButton.transform.SetParent(transform, false);
-            newButton.level = i + 1;
-            newButton.SetName();
-            newButton.maxScore = 0;
+
+			LevelInfo li = sl.Spawn (i);
+
+
+			newButton.CopyLevelInfo (li);
+			newButton.DisplayInfo ();
+			Destroy (li.gameObject);
+
+			if (!CP) {
+				Debug.Log ("confirm panel not found");
+			}
+			else {
+				newButton.confirmPanel = CP;
+			}
+        
         }
 	}
 	

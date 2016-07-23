@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;   
 
 
 [RequireComponent(typeof(SoundControl))]
@@ -27,7 +27,7 @@ public class MainMenuControl : MonoBehaviour {
     public void ResetGame()
     {
         PlayerPrefs.DeleteAll();
-        Start();
+		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
     }
 
     void SetAudio()
