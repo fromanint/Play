@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
+[RequireComponent(typeof(FXSound))]
 public class Notes : MonoBehaviour {
 
 	[SerializeField] int points;
+  
 
 	GameControl GC;
 
@@ -21,7 +24,9 @@ public class Notes : MonoBehaviour {
         {
 			GC.score += points;
 			FindObjectOfType<ScoreUI> ().UpdateScore ();
+            GetComponent<FXSound>().PlaySoundFX(other);
 			Destroy (gameObject);
+
         }
     }
 }

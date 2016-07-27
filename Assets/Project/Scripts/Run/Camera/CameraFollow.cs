@@ -4,7 +4,7 @@ using System.Collections;
 public class CameraFollow : MonoBehaviour {
 
 
-	GameObject Player;
+	[SerializeField]GameObject Player;
 
 	Vector3 targetPos;
 
@@ -16,7 +16,8 @@ public class CameraFollow : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		targetPos = transform.position;
-		Player = GameObject.FindGameObjectWithTag("Player");
+		//Player = GameObject.FindGameObjectWithTag("Player");
+       
         offset = 0;
 	}
 
