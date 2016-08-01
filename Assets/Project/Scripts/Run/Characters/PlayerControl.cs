@@ -68,6 +68,7 @@ public class PlayerControl : MonoBehaviour
     {
        
         yield return new WaitForSeconds (starTime);
+        GetComponent<Animator>().ResetTrigger("Run");
         accelerationMilestone = transform.position.x + initialMilestone;
         GetComponent<Animator>().SetTrigger("Run");
         speed = startSpeed;
