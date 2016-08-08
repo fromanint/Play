@@ -27,7 +27,6 @@ public class NoteButton : MonoBehaviour {
 
     IEnumerator Change(){
         GC.actualNote = buttonNote;
-		Debug.Log ("pushed" + GC.actualNote);
         yield return new WaitForSeconds(delay);
         GC.actualNote = "";
         }

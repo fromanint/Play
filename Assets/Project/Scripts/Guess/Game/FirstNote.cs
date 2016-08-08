@@ -6,7 +6,10 @@ public class FirstNote : MonoBehaviour {
 
  
 public string noteName;
-
+    [SerializeField]
+    AudioClip wrong;
+    [SerializeField]
+    AudioClip correct;
     GuessControl GC;
     void Start()
     {
@@ -25,12 +28,19 @@ public string noteName;
         if (other.gameObject.tag == "Player")
 		{
             if (GC.actualNote == noteName)
-            { 
-				GC.score++;
-				GetComponent<Collider2D> ().enabled = false;
+            {
+                GC.score++;
+                GC.UpdateScore();
+                other.gameObject.GetComponent<AudioSource>().clip = correct;
+                other.gameObject.GetComponent<AudioSource>().Play();             
+                GetComponent<Collider2D>().enabled = false;
                 Destroy(gameObject);
-				Debug.Log (GC.score);
-            }      
+                Debug.Log(GC.score);
+            }
+            else {
+                other.gameObject.GetComponent<AudioSource>().clip = wrong;
+                other.gameObject.GetComponent<AudioSource>().Play();
+            }   
         }
     }
 }

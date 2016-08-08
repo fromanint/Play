@@ -3,7 +3,7 @@ using System.Collections;
 
 
 public class SpawnLevel : MonoBehaviour {
-	[SerializeField] LevelInfo[] levels;
+	[SerializeField] GuessControl[] levels;
 	[HideInInspector] public int index;
 
 	void Awake() {
@@ -12,15 +12,18 @@ public class SpawnLevel : MonoBehaviour {
 	
 	}
 
+    public LevelInfo GetLevelInfo(int i) {
+        return levels[i].GuessControlToLevelInfo();
+    }
 
-	public LevelInfo[] GetLevels(){
+	public GuessControl[] GetLevels(){
 		return levels;
 	}
 
-	public LevelInfo Spawn(int i ){
-		return Instantiate (levels [i]) as LevelInfo;
+	public GuessControl Spawn(int i ){
+		return Instantiate (levels [i]) as GuessControl;
 	}
-	public LevelInfo Spawn(){
-		return Instantiate (levels [index]) as LevelInfo;
+	public GuessControl Spawn(){
+		return Instantiate (levels [index]) as GuessControl;
 	}
 }

@@ -2,7 +2,8 @@
 using System.Collections;
 
 public class NoteGuess : MonoBehaviour {
-
+    [SerializeField]
+    AudioClip wrong;
 
     [HideInInspector]
     public string noteName;
@@ -30,7 +31,10 @@ public class NoteGuess : MonoBehaviour {
             if (GC.actualNote == noteName)
             {
                 GC.score++;
-             
+            }
+            else {
+                other.GetComponent<AudioSource>().clip = wrong;
+                other.GetComponent<AudioSource>().Play();
             }
         }
     }

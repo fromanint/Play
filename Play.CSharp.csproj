@@ -58,12 +58,6 @@
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
@@ -224,12 +218,16 @@
     <Compile Include="Assets\Project\Scripts\Generals\Var_Globales.cs" />
     <Compile Include="Assets\Project\Scripts\Guess\Game\AssignGuessControl.cs" />
     <Compile Include="Assets\Project\Scripts\Guess\Game\AssignNote.cs" />
-    <Compile Include="Assets\Project\Scripts\Guess\Game\FinishNote.cs" />
     <Compile Include="Assets\Project\Scripts\Guess\Game\FirstNote.cs" />
     <Compile Include="Assets\Project\Scripts\Guess\Game\GuessControl.cs" />
+    <Compile Include="Assets\Project\Scripts\Guess\Game\GuessControlTest.cs" />
+    <Compile Include="Assets\Project\Scripts\Guess\Game\GuessFinish.cs" />
+    <Compile Include="Assets\Project\Scripts\Guess\Game\GuessGameOver.cs" />
+    <Compile Include="Assets\Project\Scripts\Guess\Game\GuessScore.cs" />
     <Compile Include="Assets\Project\Scripts\Guess\Game\NoteButton.cs" />
     <Compile Include="Assets\Project\Scripts\Guess\Game\NoteGuess.cs" />
     <Compile Include="Assets\Project\Scripts\Guess\Game\SpawnLevel.cs" />
+    <Compile Include="Assets\Project\Scripts\Guess\Game\WrongGuess.cs" />
     <Compile Include="Assets\Project\Scripts\Guess\Selection\ConfirmPanel.cs" />
     <Compile Include="Assets\Project\Scripts\Guess\Selection\LevelButton.cs" />
     <Compile Include="Assets\Project\Scripts\Guess\Selection\LevelInfo.cs" />

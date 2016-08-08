@@ -37,7 +37,16 @@ public class LevelManager : MonoBehaviour {
     public void Previous()
     {
 
-        
+        Debug.Log(levels);
+        if (levels - maxLevels >= 0)
+        {
+            ClearLevels();
+            levels -= maxLevels;
+            GenerateLevels( maxLevels);
+        }
+        else {
+            Debug.Log("no more levels");
+        }
     }
 
     void ClearLevels()
@@ -59,12 +68,12 @@ public class LevelManager : MonoBehaviour {
             LevelButton newButton = Instantiate(levelsButton) as LevelButton;
             newButton.transform.SetParent(transform, false);
 
-            LevelInfo li = sl.Spawn(levels);
+            LevelInfo li = sl.GetLevelInfo(levels);
 
 
             newButton.CopyLevelInfo(li);
             newButton.DisplayInfo();
-            Destroy(li.gameObject);
+          //  Destroy(li.gameObject);
 
             if (!confirmPanel)
             {

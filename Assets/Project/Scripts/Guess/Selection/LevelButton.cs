@@ -55,20 +55,10 @@ public class LevelButton : MonoBehaviour {
 	}
      void SetStars()
     {
-		
-       
-		Image[] stars = Stars.transform.GetComponentsInChildren<Image>();
-        if (level.score >= level.maxScore * .6)
+        Image[] stars = Stars.transform.GetComponentsInChildren<Image>();
+        for (int i = 0; i < level.starCount;i++)
         {
-			stars [1].color = haveStar;
-        }
-        if (level.score >= level.maxScore * .8)
-        {
-			stars[2].color = haveStar;
-        }
-        if (level.score >= level.maxScore * .95)
-        {
-			stars[3].color = haveStar;
+            stars[i+1].color = haveStar;
         }
 
     }
