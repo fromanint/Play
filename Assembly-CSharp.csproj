@@ -179,12 +179,16 @@
      <Compile Include="Assets\Project\Scripts\Generals\Var_Globales.cs" />
      <Compile Include="Assets\Project\Scripts\Guess\Game\AssignGuessControl.cs" />
      <Compile Include="Assets\Project\Scripts\Guess\Game\AssignNote.cs" />
-     <Compile Include="Assets\Project\Scripts\Guess\Game\FinishNote.cs" />
      <Compile Include="Assets\Project\Scripts\Guess\Game\FirstNote.cs" />
      <Compile Include="Assets\Project\Scripts\Guess\Game\GuessControl.cs" />
+     <Compile Include="Assets\Project\Scripts\Guess\Game\GuessControlTest.cs" />
+     <Compile Include="Assets\Project\Scripts\Guess\Game\GuessFinish.cs" />
+     <Compile Include="Assets\Project\Scripts\Guess\Game\GuessGameOver.cs" />
+     <Compile Include="Assets\Project\Scripts\Guess\Game\GuessScore.cs" />
      <Compile Include="Assets\Project\Scripts\Guess\Game\NoteButton.cs" />
      <Compile Include="Assets\Project\Scripts\Guess\Game\NoteGuess.cs" />
      <Compile Include="Assets\Project\Scripts\Guess\Game\SpawnLevel.cs" />
+     <Compile Include="Assets\Project\Scripts\Guess\Game\WrongGuess.cs" />
      <Compile Include="Assets\Project\Scripts\Guess\Selection\ConfirmPanel.cs" />
      <Compile Include="Assets\Project\Scripts\Guess\Selection\LevelButton.cs" />
      <Compile Include="Assets\Project\Scripts\Guess\Selection\LevelInfo.cs" />
@@ -200,6 +204,7 @@
      <Compile Include="Assets\Project\Scripts\Run\Characters\ClickControl.cs" />
      <Compile Include="Assets\Project\Scripts\Run\Characters\PlayerControl.cs" />
      <Compile Include="Assets\Project\Scripts\Run\Characters\SwipeControl.cs" />
+     <Compile Include="Assets\Project\Scripts\Run\FXSound.cs" />
      <Compile Include="Assets\Project\Scripts\Run\General\BackgroundControl.cs" />
      <Compile Include="Assets\Project\Scripts\Run\General\Camera2DFollow.cs" />
      <Compile Include="Assets\Project\Scripts\Run\General\SpawnObjects.cs" />

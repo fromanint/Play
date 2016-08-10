@@ -7,6 +7,7 @@ public class NoteGuess : MonoBehaviour {
 
     [HideInInspector]
     public string noteName;
+	bool hitted;
 
     GuessControl GC;
     void Start()
@@ -16,7 +17,7 @@ public class NoteGuess : MonoBehaviour {
         {
             Debug.Log("No guess control script");
         }
-    
+		hitted = false;
     }
 
 
@@ -31,10 +32,13 @@ public class NoteGuess : MonoBehaviour {
             if (GC.actualNote == noteName)
             {
                 GC.score++;
+				hitted = true;
             }
             else {
-                other.GetComponent<AudioSource>().clip = wrong;
-                other.GetComponent<AudioSource>().Play();
+				if (hitted) {
+					other.GetComponent<AudioSource> ().clip = wrong;
+					other.GetComponent<AudioSource> ().Play ();
+				}
             }
         }
     }
