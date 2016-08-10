@@ -22,6 +22,17 @@ public class NoteGuess : MonoBehaviour {
 
 
     void OnTriggerExit2D(Collider2D other){
+        if (other.gameObject.tag == "Player")
+        {
+            if (hitted)
+            {
+                GC.score++;
+            }
+            else {
+                other.GetComponent<AudioSource>().clip = wrong;
+                other.GetComponent<AudioSource>().Play();
+            }
+        }
         Destroy(gameObject);
     }
 
@@ -31,15 +42,10 @@ public class NoteGuess : MonoBehaviour {
         {
             if (GC.actualNote == noteName)
             {
-                GC.score++;
-				hitted = true;
-            }
-            else {
-				if (hitted) {
-					other.GetComponent<AudioSource> ().clip = wrong;
-					other.GetComponent<AudioSource> ().Play ();
-				}
-            }
+                Debug.Log(hitted);
+                if (!hitted)
+                { hitted = true; }
+            }           
         }
     }
 }
