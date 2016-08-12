@@ -10,6 +10,8 @@ public class GuessControlTest : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+
+        GC = FindObjectOfType<GuessControl>();
         NoteButton[] buttons = GetComponentsInChildren<NoteButton>();
         foreach (NoteButton nb in buttons)
         {
