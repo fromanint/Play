@@ -17,6 +17,8 @@ public class GuessControl : MonoBehaviour {
 
     [HideInInspector] public GuessScore guessScore;
     [HideInInspector] public int stars; 
+	[HideInInspector] public bool bassClef;
+
     void Start()
     {
         Debug.Log(SceneManager.GetActiveScene().ToString());

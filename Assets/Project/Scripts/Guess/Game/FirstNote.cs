@@ -6,10 +6,10 @@ public class FirstNote : MonoBehaviour {
 
  
 public string noteName;
-    [SerializeField]
-    AudioClip wrong;
-    [SerializeField]
-    AudioClip correct;
+	[HideInInspector]
+    public AudioClip wrong;
+	[HideInInspector]
+    public AudioClip correct;
     GuessControl GC;
     void Start()
     {
